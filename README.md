@@ -8,3 +8,9 @@ event.on('some_event', function() { //定义som_event事件
 setTimeout(function() { 
     event.emit('some_event'); //触发som_event事件
 }, 1000); 
+
+# Buffer
+<!-- Buffer 数据类型和数组的处理 -->
+
+# Stream
+<!-- Stream 文件流的读写处理，可以用来做导出文件功能 -->
