@@ -1,10 +1,14 @@
 # EventEmitter
-<!-- EventEmitter类似于JS中的定义方法和触发方法 -->
+EventEmitter类似于JS中的定义方法和触发方法
+
 var EventEmitter = require('events').EventEmitter; 
+
 var event = new EventEmitter(); 
+
 event.on('some_event', function() { //定义som_event事件
     console.log('some_event 事件触发'); 
 }); 
+
 setTimeout(function() { 
     event.emit('some_event'); //触发som_event事件
 }, 1000); 
@@ -24,10 +28,13 @@ Stream 文件流的读写处理，可以用来做导出文件功能
 function say(word) {
   console.log(word);
 }
+
 function execute(someFunction, value) {
   someFunction(value);
 }
+
 execute(say, "Hello");
+
 以上代码中，我们把 say 函数作为execute函数的第一个变量进行了传递。这里传递的不是 say 的返回值，而是 say 本身！
 
 # 匿名函数
@@ -36,6 +43,7 @@ execute(say, "Hello");
 function execute(someFunction, value) {
   someFunction(value);
 }
+
 execute(function(word){ console.log(word) }, "Hello");
 
 我们在 execute 接受第一个参数的地方直接定义了我们准备传递给 execute 的函数。
